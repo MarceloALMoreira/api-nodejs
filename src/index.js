@@ -7,10 +7,12 @@ dotenv.config();
 
 const app = express();
 
+const port = 3001;
+
 app.use(cors());
 app.use(express.json());
 
 routes(app);
 
-app.listen(3001);
-console.log("Server running in");
+app.listen(port);
+console.log(`Server running in http://localhost:${port}`);
